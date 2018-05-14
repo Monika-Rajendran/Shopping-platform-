@@ -1,0 +1,53 @@
+<html>
+<body>
+<script>
+function vform(){
+var nm=document.myform.nm.value;
+var cn=document.myform.cn.value;
+var pin=document.myform.pin.value;
+var an=document.myform.an.value;
+if(nm==null || nm=="")
+{
+document.getElementById("nm").focus();
+return false;
+}
+else if( cn==null || cn=="")
+{
+document.getElementById("cn").focus();
+return false;
+}
+else if(pin==null || pin==""  )
+{
+
+document.getElementById("pin").focus();
+return false;
+}html
+else if(an==null || an=="" )
+{
+document.getElementById("an").focus();
+alert("Valid aadhar number please");
+return false;
+}
+
+alert("SUCCESS!!");
+}
+
+</script>
+<form name="myform" method="post" onsubmit="return vform()">
+<br><br>
+Name:*<br><br><input type="text" id="nm" >
+<br><br>
+Card Number:*<br><br><input type="number" id="cn">
+<br><br>
+PIN:*<br><br><input type="password" id="pin">
+<br><br>
+Adhar number:*<br><br><input type="number" id="an">
+<br><br>
+<input type="submit" value="CONFIRM" onclick="msg()">
+<br><br>
+<input type="reset">
+<br><br>
+The fields marked with * are mandatory
+</form>
+</body>
+</html>
